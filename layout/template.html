@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PROGRAM SIAKAD SEDERHANA</title>
+    <style type="text/css">
+      body {
+        background: #ffffff;
+        font-family: "Arial";
+      }
+      #halaman {
+        background: #ffffff;
+        width: 900px;
+        margin: auto; /*agar otomatis jaraknya menyesuaikan resolusi*/
+        border: 10px #c0c0c0;
+        box-shadow: 0px 0px 12px 8px #555555;
+      }
+      #header {
+        background: #000000;
+        height: 150px;
+        border-bottom: 5px solid #ffaa55;
+      }
+      #menu {
+        background: #092274;
+        height: 45px;
+        border-radius: 0px 0px 8px 8px;
+        margin: 0px 10px 0px 10px;
+      }
+      #menu:hover {
+        background: #0055ff;
+      }
+      #isi {
+        padding: 10px;
+        min-height: 400px;
+        background: rgb(255, 255, 255);
+        border-radius: 8px;
+        border: 2px double #ffffff;
+      }
+      #footer {
+        background: #092274;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="halaman">
+      <div id="header">
+        <img src="../static/gambar/image.png" width="900" height="150" />
+      </div>
+      <div id="menu">{% include "layout/menu.html" %}</div>
+      <div id="isi">{% block isine %} Nanti isine disini {% endblock %}</div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
